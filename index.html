@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TranslateApp</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
     <div class="title"> Translator </div>
         <div class="Text">
-            <textarea id="text" placeholder="Enter Text"></textarea>
+            <textarea id="fromtext" placeholder="Enter Text"></textarea>
         </div>
         <div class="selectArea">
             <div class="svgside1">
@@ -19,6 +20,9 @@
                 <select name="" id="fselect">
                   
                 </select>
+            </div>
+            <div class="exchange">
+                <li class="bx bx-transfer"></li>
             </div>
             <div class="svgside2">
                 <img src="speaker.svg" alt="" class="speaker" id="to">
@@ -31,9 +35,7 @@
         </div>
         <div class="Text">
             <textarea name=""  id="translated_text" placeholder="Translate"></textarea>
-        </div>
-        <button id="translation">Translate</button>
-    </div>
+        
     <script src="country.js"></script>
     <script src="script.js"></script>
 </body>

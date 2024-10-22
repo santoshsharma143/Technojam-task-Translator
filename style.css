@@ -13,7 +13,7 @@ body{
     justify-content: center;
 }
 .container{
-    width: 700px;
+    width: 800px;
     height: 650px;
     background: linear-gradient(to top,#014d07,#4ba700);
     display: flex;
@@ -44,7 +44,7 @@ body{
     overflow: hidden;
 
 }
-#text{
+#fromtext{
     width: 100%;
     height: 200px;
     color: black;
@@ -75,11 +75,11 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #003103;
     margin-top: 20px;
 }
 .svgside1{
-    width: 50%;
+    background-color: #003103;
+    width: 45%;
     height: 100%;
     display: flex;
     align-items: center;
@@ -89,7 +89,8 @@ body{
     border-radius: 5px;
 }
 .svgside2{
-    width: 50%;
+    width: 45%;
+    background-color: #003103;
     height: 100%;
     display: flex;
     align-items: center;
@@ -116,28 +117,36 @@ body{
     border-radius: 10px;
     cursor: pointer;
 }
-#translation{
-    width: 500px;
-    height: 50px;
-    background-color: #002509;
-    margin-top: 25px;
-    color: #ffff;
-    font-size: 18px;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-}
-.speak{
+
+.speaker{
     cursor: pointer;
     transition: 0.3s all;
 }
-.speak:hover{
+.speaker:hover{
   transform: scale(130%);
 }
-.copyed{
+.copy{
     cursor: pointer;
     transition: 0.3s all;
 }
-.copyed:hover{
+.copy:hover{
   transform: scale(130%);
+}
+.exchange{
+    height: 100%;
+    width: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.bx-transfer{
+    font-size: x-large;
+    color: white;
+    cursor: pointer;
+    transition: .3s ease-out;
+}
+.bx-transfer:hover {
+    transform: scale(130%);
+
 }
