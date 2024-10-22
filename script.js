@@ -1,10 +1,10 @@
-const selectTag = document.querySelectorAll("select");
+const langtag = document.querySelectorAll("select");
 const fromtext = document.querySelector("#fromtext");
 const translated_text = document.querySelector("#translated_text");
 const icons = document.querySelectorAll("img");
 const exchangelang=document.querySelector(".bx-transfer")
 
-selectTag.forEach((tag, id) => {
+langtag.forEach((tag, id) => {
   for (const countriesCode in countries) {
     let selected;
     if (id == 0 && countriesCode == "en-GB") {
@@ -19,8 +19,8 @@ selectTag.forEach((tag, id) => {
 
 fromtext.addEventListener("input", () => {
   let Text = fromtext.value, 
-    translateFrom = selectTag[0].value,
-    translateTo = selectTag[1].value;
+    translateFrom = langtag[0].value,
+    translateTo = langtag[1].value;
 
   let apiURL = `https://api.mymemory.translated.net/get?q=${Text}!&langpair=${translateFrom}|${translateTo}`;
 
@@ -43,11 +43,11 @@ icons.forEach((icon) => {
       let speaks;
       if (target.id == "from") {
         speaks = new SpeechSynthesisUtterance(fromtext.value);
-        speaks.lang = selectTag[0].value;
+        speaks.lang = langtag[0].value;
         
       } else {
         speaks = new SpeechSynthesisUtterance(translated_text.value);
-        speaks.lang = selectTag[1].value;  
+        speaks.lang = langtag[1].value;  
       }
       speechSynthesis.speak(speaks);
     }
@@ -59,9 +59,9 @@ exchangelang.addEventListener("click", function(){
     fromtext.value = translated_text.value;
     translated_text.value = tempText;
 
-    let tempLang = selectTag[0].value;
-    selectTag[0].value =selectTag[1].value;
-    selectTag[1].value = tempLang;
+    let tempLang = langtag[0].value;
+    langtag[0].value =langtag[1].value;
+    langtag[1].value = tempLang;
 
 })
 
